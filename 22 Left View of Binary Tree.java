@@ -15,11 +15,12 @@ class Node
 class Tree
 {
     //Function to return list containing elements of left view of binary tree.
-    ArrayList<Integer> outputarr=new ArrayList<>();
-    static int maxlevel=0;
-
+    ArrayList<Integer> outputarr;
+    static int maxlevel;
     ArrayList<Integer> leftView(Node root)
     {
+        maxlevel=0;
+        outputarr =new ArrayList<>();   
         utilfunc(root,1);
         return outputarr;
     }
